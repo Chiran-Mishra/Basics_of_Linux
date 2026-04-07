@@ -110,13 +110,18 @@ means first it goes home directory and one directory back and list that content.
 Code 10: make directory
 
 # $ mkdir     filename
-# $ mkdir    file1   file2    file3     file4
+# $ mkdir    file1   file2    file3     file4, but you cannot make mkdir ram/shyam simulatenoulsy totally new directory one inside. You need to have like for this 
+mkdir -p ram/shyam then you can make it using -p. 
 # $ mkdir     final1/final1.1   final1/final1.2    final1/final 1.3      final 2     
 # $ mkdir -p /home/akhilesh/documents/important
 -p: option to create parent directories as needed. If the parent directories don't exist, mkdir will create them.
 /home/akhilesh/documents/important: The full path of the directory you want to create. This command will create the important directory and any necessary parent directories (/home, /home/akhilesh, /home/akhilesh/documents) if they don't already exist.
 Every time you can use absolute or relative paths to manipulate things.
 
+Create a .txt file inside the directory
+#mkdir -p ram
+#touch ram/file.txt
+#mkdir ram && cd ram && touch ram.txt
 
 
 
