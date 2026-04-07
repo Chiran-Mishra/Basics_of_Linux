@@ -143,6 +143,9 @@ If u want to copy a directory inside another directory
 # $ cp  file1.txt    file2.txt
 # $ cp  file1    file2     destination_directory
 # $cp cp -r directory1 directory2   destination_directory
+Similarly, I have a a file_1.txt with he written inside it and another file file_2.txt with she inside it and if
+i use code file1.txt file2.txt, the he inside pf file.txt will be overwirrten inside file2.txt and she will be remobed with no warming 
+but tp avoid use -i. cp -i file_1.txt file_2.txt
 
 Available Options
 -i: Interactive, prompts before overwriting existing files.
