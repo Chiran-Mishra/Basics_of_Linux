@@ -507,16 +507,12 @@ Arrow keys: Navigate through the text.
 
 
 Code 22: compress
-# $ gzip filename
+# $ gzip filename. It converts the file into filename.gz.
 
-It convets file into filename.gz.
-
-# $ gzip filename1 filename2 filename3
-
-It compresses multiple files.
+# $ gzip filename1 filename2 filename3. It compresses multiple files separately.
 
 # $ gzip *.txt
-Compressed all files with .txt.
+Compressed all files with .txt separately.
 
 # $  gzip -c filename > filename.gz
 
