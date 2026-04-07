@@ -151,6 +151,10 @@ cp ram.txt shyam.txt (note shyam.txt no exist, it will make a new file shyam.txt
 
 # $ mkdir hari_2 && cp -r ram hari/
 
+cp file1.txt file2.txt ram/ (copies multiple file in a directory)
+cp *.txt ram/ (all .txt files copy)
+cp directory1 directory (cannot copy directories ). for this use cp -r dir1 dir2. copies everything inside the directory (files + subfolders)
+
 Available Options
 -i: Interactive, prompts before overwriting existing files.
 -v: Verbose, displays a message for each file copied.
@@ -181,15 +185,29 @@ Code 14: more command
 This command displays the contents of the specified file (filename) one screen at a time. If the file is longer than one screen, you can navigate through it using the keyboard.
 
 # $ more -c file_name
+This command displays the file one page at a time, but instead of scrolling, it clears the screen before showing each new page.
 
-# $ more -10 file_name
+# $ more -10 file_name (first 10 line instead of all filling the screen)
+then use enter- give one line, space 10 more line)
+
 # $ more +10 file_name
+Tis command displays the file starting from line 10 instead of the beginning. What happens:
+Lines 1–9 are skipped
+Display starts from line 10 onward
+
+👉 After that, it behaves like normal more:
+
+Space → next page
+Enter → next line
+q → quit
 
 # $ more -d file_name
+It lets you view a file page by page
+
 # $ more -p file_name
-
-
-
+Each new page: 
+clears the screen 🧹
+shows fresh content only
 
 Navigation
 Spacebar: Move forward one screen.
@@ -201,12 +219,13 @@ Q: Quit viewing the file and return to the shell prompt.
 
 
 Code 15: move
+mv: Command to move or rename files and directories.
 
 # $mv   option    source    destination
 # $mv   file1    file2     destination_directory/
 # $mv   file.txt    /path/to/destination/
 # $mv    oldname.txt    newname.txt
-mv: Command to move or rename files and directories.
+it renames oldname.txt to new name)
 oldname.txt: The current name of the file.
 newname.txt: The new name you want to give the file.
 
@@ -226,10 +245,11 @@ Additional Options:
 
 Code 16: remove
 # $ rm   myfile.txt
+rm * ( delete all files in the folder)
 
 # $rm    file1.txt      file2.txt
 
-# $rm  -r  mydirectory
+# $rm  -r  mydirectory or rm -r folder_name (delete eth inside)
 
 # $rm -r -i  mydirectory
 
@@ -247,14 +267,39 @@ dir1.log/file3.log
 #@ rm -r -i *.log
 #@ ls *.txt
 #@ ls file* (matches pattern starting with name file)
-#@ ls doc*.pdf
+#@ ls doc*.pdf (start with doc + anything + end with .pdf)
 Find files starting with doc and ending in .pdf
 
 
 
 # $rm file?.txt (matches file starting with file and one character after file and .txt at end.
+starts with file
+then one character only
+ends with .txt
+ex.
+file1.txt
+file2.txt
+fileA.txt
+file10.txt
+file.txt
+output- 
+file1.txt
+file2.txt
+fileA.txt
+why?
+file10.txt   ❌ (two characters after "file")
+file.txt     ❌ (no character after "file")
+
 
 # $rm file_?.txt
+file_ → fixed text
+? → exactly ONE character
+.txt → must end with .txt
+
+? → 1 character
+?? → 2 characters
+
+useful commands: rm *.sam, rm *_unpaired.fastq
 
 Additional Tips:
 
@@ -308,7 +353,9 @@ Shows the content of the file.
 
 #$ cat file1 file2  file3 
 
-This command will concatenate the contents of file1.txt and file2.txt and display them together.
+This command will concatenate the contents of file1.txt and file2.txt and display them together. 
+The command cat file1 file2 file3 is used to display the contents of multiple files together. 
+It reads the files in order and prints their contents one after another on the screen
 
 #$ cat file1.txt file2.txt > newfile.txt
 
@@ -316,7 +363,9 @@ This command will concatenate the contents of file1.txt and file2.txt and save t
 
 # $cat chiru.fasta > chiru_4.fasta
 
-If chiru.fasta has some text and chiru_4.fasta is a new file with no content means the text of the chiru.fasta will be converted in chiru_4.fasta and if there is some content in chiru_4.fasta , then the file of chiru.fasta will be converted in chiru_4.fasta and the text of the chiru_4.fasta will be overwritten. If u don’t want to overwrite you can use >> symbol.
+If chiru.fasta has some text and chiru_4.fasta is a new file with no content means the text of the chiru.fasta will be converted in chiru_4.fasta 
+and if there is some content in chiru_4.fasta , then the file of chiru.fasta will be converted in chiru_4.fasta and the text of the chiru_4.fasta will be overwritten.
+If u don’t want to overwrite you can use >> symbol.
 
 
 Explanation:
@@ -331,7 +380,8 @@ chiru_4.fasta: The destination file where the contents of chiru.fasta will be co
 
 # $cat chiru.fasta >> chiru_4.fasta
 
-The content of the file chiru.fasta will be added to the end of the file chiru_4.fasta (this has already some text in it and the text of the file chiru.fasta will be added to the end of chiru_4.fasta)
+The content of the file chiru.fasta will be added to the end of the file chiru_4.fasta 
+(this has already some text in it and the text of the file chiru.fasta will be added to the end of chiru_4.fasta)
 
 Explanation:
 
@@ -364,7 +414,8 @@ Code 19: Word Count
 
 # $wc filename
 
-This command counts the number of lines, words, and characters in the specified file (filename). By default, it displays the counts for lines, words, and characters in that order.
+This command counts the number of lines, words, and characters in the specified file (filename). 
+By default, it displays the counts for lines, words, and characters in that order.
 
 Options:
 -l: Displays only the count of lines.
@@ -453,14 +504,6 @@ or
 Insert Mode:
 Esc: Return to Command Mode.
 Arrow keys: Navigate through the text.
-
-
-
-
-
-
-
-
 
 
 Code 22: compress
