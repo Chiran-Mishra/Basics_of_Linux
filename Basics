@@ -1,0 +1,2232 @@
+BIOINFORMATICS
+
+
+Code 1:  cd
+
+#  $ cd
+It will direct the working directory. 
+
+Then type,
+
+ # $pwd
+it will show the directory of that area. E.g. /home/Akhilesh.
+
+
+Code 2: Root directory
+
+Root directory lies in top hierarchy and is denoted by /. It has things like bin,dev, etc,lib, root and bin type.
+ # $ / 
+means root directory.
+or 
+$ cd / 
+means working directory. Home directory is denoted by /home.
+
+
+Code 3: home directory
+# cd ~ 
+means home directory and we can start from that to start to access other directories. It means /home/akhilesh.
+
+
+
+Code 4: move back to directories
+
+# $ cd ../../../.. 
+means one directory back everytime. 
+And
+# $ cd – 
+means one directory back.
+
+
+
+Code 5: access the directories ahead
+
+If there is directory document and there is file inside it, suppose dirt12. If you want to go to dirt12. To go there you can do,
+
+# $ cd  /home/akhilesh/Document/dirt12
+
+Or,
+
+# $ cd  ~/Document/dirt12
+
+But if you are in Document directory and you use the command 
+
+# $ cd /Document/dirt12. It won’t work because ‘/’ shows root directory.
+
+ So,
+
+# $ cd  Documents/dirt12 will work.
+
+
+
+Code 6: home directory
+# $ cd /home 
+
+
+
+Code 7: show the content
+
+# $ ls
+means shows content of the file. 
+
+Availabe Options
+
+ -l: Long format, displays detailed information about each file or directory.
+-a: All files, includes hidden files (those starting with .).
+-h: Human-readable, displays file sizes in a human-readable format (e.g., KB, MB, GB).
+-r: Reverse order, lists files in reverse order.
+-t: Sort by modification time, newest first.
+-S: Sort by file size, largest first.
+-R: Recursive, lists subdirectories recursively.
+-i: Inode, displays the inode number of each file.
+--color: Adds color to the output for easier readability.
+We can combine the options to get desired things.
+
+#$ ls -lthr 
+means it includes,
+-l: Long format. Displays detailed information about each file or directory, including permissions, owner, group, size, modification time, and filename.
+-t: Sorts the files by modification time, with the most recently modified files first.
+-r: Reverse order. Lists the files in reverse order, so the oldest files come first.
+-h: Human-readable format. Displays file sizes in a format that is easier for humans to read, such as "K" for kilobytes, "M" for megabytes, etc.
+
+
+
+Code 8: current directory
+# $cd .
+Means,
+If there is file inside the current directory and you want to open it in your command, you can use . to show all the files used there.
+
+
+Code 9: listing
+# $ ls ~  
+means it list contents directly of the home directory.  
+
+# $ ls ~/Documents
+means it first reach the home directory and then goes to documents and list its content or we can do like,
+# $ ls /home/akhilesh/Documents
+#$ ls ~/ .. 
+means first it goes home directory and one directory back and list that content. In this way we can manipulate the directories.
+
+
+Code 10: make directory
+
+# $ mkdir     filename
+# $ mkdir    file1   file2    file3     file4
+# $ mkdir     final1/final1.1   final1/final1.2    final1/final 1.3      final 2     
+# $ mkdir -p /home/akhilesh/documents/important
+-p: option to create parent directories as needed. If the parent directories don't exist, mkdir will create them.
+/home/akhilesh/documents/important: The full path of the directory you want to create. This command will create the important directory and any necessary parent directories (/home, /home/akhilesh, /home/akhilesh/documents) if they don't already exist.
+Every time you can use absolute or relative paths to manipulate things.
+
+
+
+
+Code 11: copy command
+
+# $ cp    source_file     destination_file
+Suppose we have a directory inside Documents called dirt12 and inside it has tinki directory and inside it has Tink directory. There is a file ice-cream and u want to copy it in dirt 12 and inside it.
+# $ cp ice-cream   dirt12
+And if you want to copy in tinki,
+# $ cp ice-cream dirt12/tinki
+And if you want to copy in tink
+# $ cp icecream dirt12/tinki/tink
+Alternatively, 
+# $cp icecream  ~/Documents/dirt12/tinki/tink
+Similarly,
+If u want to copy a directory inside another directory
+# $ cp  -r    source_directory      destination_directory
+# $ cp source_file     destination_file …If the destination file is already there and it will be overwritten.
+# $ cp  file1.txt    file2.txt
+# $ cp  file1    file2     destination_directory
+# $cp cp -r directory1 directory2   destination_directory
+
+Available Options
+-i: Interactive, prompts before overwriting existing files.
+-v: Verbose, displays a message for each file copied.
+-r: Recursive, copies directories and their contents recursively.
+-a: Archive, preserves file attributes like permissions, timestamps, and ownership.
+-u: Update, copies only if the source file is newer than the destination file or if the destination file does not exist.
+--preserve: Preserves specified attributes like permissions, ownership, timestamps, and more
+
+Code 13: Create new file
+
+# $touch filename
+# $ touch Sujata.txt 
+Want to create multiple files, below is the code.
+# $touch  Sujata.txt     Ram.txt     Hari.txt
+#$touch sujata1.txt   dirt12/sujata3.txt  Documents/dirt12/tinki.txt
+
+Additional Options
+-c: Does not create a file if it doesn't exist.
+-r: Sets the timestamps of a file to match another file's timestamps.
+-t: Sets the timestamps of a file to a specified time in the past.
+ 
+
+
+
+Code 14: more command
+
+# $ more  file_name
+This command displays the contents of the specified file (filename) one screen at a time. If the file is longer than one screen, you can navigate through it using the keyboard.
+
+# $ more -c file_name
+
+# $ more -10 file_name
+# $ more +10 file_name
+
+# $ more -d file_name
+# $ more -p file_name
+
+
+
+
+Navigation
+Spacebar: Move forward one screen.
+Enter: Move forward one line.
+Arrow keys: Move up and down one line at a time.
+Q: Quit viewing the file and return to the shell prompt.
+
+
+
+
+Code 15: move
+
+# $mv   option    source    destination
+# $mv   file1    file2     destination_directory/
+# $mv   file.txt    /path/to/destination/
+# $mv    oldname.txt    newname.txt
+mv: Command to move or rename files and directories.
+oldname.txt: The current name of the file.
+newname.txt: The new name you want to give the file.
+
+
+
+# $ mv oldname.txt      /path/to/directory/newname.txt
+This moves oldname.txt to /path/to/directory/ and renames it to newname.txt.
+
+# $mv     file.txt     /path/to/newname.txt
+# $mv    source_directory     destination_directory
+
+Additional Options:
+-i: Interactive, prompts before overwriting existing files.
+-v: Verbose, displays a message for each file moved.
+-u: Update, moves only if the source file is newer than the destination file or if the destination file does not exist.
+
+
+Code 16: remove
+# $ rm   myfile.txt
+
+# $rm    file1.txt      file2.txt
+
+# $rm  -r  mydirectory
+
+# $rm -r -i  mydirectory
+
+# $rm  -f   myfile.txt
+
+# $rm   *.txt
+
+# $rm  -r   *.log
+If u are in current directory and it has following files.
+file1.log
+file2.log
+dir1.log/
+dir1.log/file3.log
+
+#@ rm -r -i *.log
+#@ ls *.txt
+#@ ls file* (matches pattern starting with name file)
+#@ ls doc*.pdf
+Find files starting with doc and ending in .pdf
+
+
+
+# $rm file?.txt (matches file starting with file and one character after file and .txt at end.
+
+# $rm file_?.txt
+
+Additional Tips:
+
+Use rm -rf with extreme caution, as it will forcefully remove directories and their contents without prompting for confirmation. It's often used in scripts or automation tasks where manual intervention is not possible or desired.
+Always double-check the files and directories you're removing, especially when using options like -rf. Use options,
+ #$ rm -f (remove forcefully)
+#$  rm -i (prompt confirmation)
+#$ rm -r, -R, --recursive (same thing)
+#$ rm -v (verbose)
+
+Suppose there are files with pattern,
+A123, B123, C123
+#@  ls -l ?123
+
+Suppose there are files, 
+Text, Tett, Test, Tept
+So, here only third character is different,
+#@  ls -l te?t
+
+Suppose there are many files, but I want files who has four characters only,
+#@  ls -l ????
+
+Suppose there are files, 
+A123, B123, C123, D123
+But I want all expect D123.
+#@  ls -l [abc]123
+
+I want any files which has numeric character in it,
+#@ ls -l *[0-9]*
+
+Suppose there is file called names and inside it has list of name like Ram, Hari, Raju, Sham.
+I want only those names starting with R,
+#@ cat names | grep ^R
+
+Similarly, I want names ending with am
+#@ cat names | am$
+
+
+
+
+Code 17: clear
+# $clear
+clear the terminal screen or ctrl + L
+
+
+                                                    
+Code 18: cat
+
+# $cat filename
+Shows the content of the file.
+
+#$ cat file1 file2  file3 
+
+This command will concatenate the contents of file1.txt and file2.txt and display them together.
+
+#$ cat file1.txt file2.txt > newfile.txt
+
+This command will concatenate the contents of file1.txt and file2.txt and save them into newfile.txt
+
+# $cat chiru.fasta > chiru_4.fasta
+
+If chiru.fasta has some text and chiru_4.fasta is a new file with no content means the text of the chiru.fasta will be converted in chiru_4.fasta and if there is some content in chiru_4.fasta , then the file of chiru.fasta will be converted in chiru_4.fasta and the text of the chiru_4.fasta will be overwritten. If u don’t want to overwrite you can use >> symbol.
+
+
+Explanation:
+
+cat: A command used to display the contents of a file.
+
+chiru.fasta: The source file whose contents are to be displayed and copied.
+
+>: Redirection operator that directs the output of the cat command to a specified file.
+
+chiru_4.fasta: The destination file where the contents of chiru.fasta will be copied.
+
+# $cat chiru.fasta >> chiru_4.fasta
+
+The content of the file chiru.fasta will be added to the end of the file chiru_4.fasta (this has already some text in it and the text of the file chiru.fasta will be added to the end of chiru_4.fasta)
+
+Explanation:
+
+cat: A command used to display the contents of a file.
+
+chiru.fasta: The source file whose contents are to be displayed and appended.
+
+>>: Append redirection operator that directs the output of the cat command to be added to the end of the specified file.
+
+chiru_4.fasta: The destination file where the contents of chiru.fasta will be appended.
+
+
+Additional Options:
+
+-n: Displays line numbers with the output.
+-E: Displays a dollar sign ($) at the end of each line.
+-b: Number non-blank output lines, overriding -n. This command will display the content of file.txt with line numbers, but only for non-empty lines.
+-s: Squeeze multiple adjacent empty lines into one.
+
+# $ cat -n file.txt
+# $  cat -b file.txt
+# $ cat -T file.txt
+# $  cat -E file.txt
+
+# $ cat file.txt | grep "pattern"
+
+
+
+Code 19: Word Count
+
+# $wc filename
+
+This command counts the number of lines, words, and characters in the specified file (filename). By default, it displays the counts for lines, words, and characters in that order.
+
+Options:
+-l: Displays only the count of lines.
+-w: Displays only the count of words.
+-c: Displays only the count of characters.
+-m: Displays only the count of characters.
+-L: Displays the length of the longest line.
+
+Note: We can combine option and pipeline also.
+Like,
+#$ command | wc
+
+Means put a command and then count what is there.
+#$ wc -l file1.txt file2.txt
+This command will display the line counts for each file and the total count at the end.
+2 2 12 file.txt
+This indicates:
+2 lines
+2 words
+12 characters (including spaces and newline characters
+Code 20: Nano
+
+# $nano filename
+
+Editor Controls:
+Ctrl + G: Display the help menu.
+Ctrl + O: Write out (save) the current file.
+Ctrl + X: Exit the editor.
+Ctrl + W: Search for a string or a regular expression.
+**Ctrl + **: Replace a string or a regular expression.
+Ctrl + K: Cut (delete) the current line.
+Ctrl + U: Paste the cut text.
+Ctrl + C: Display current cursor position.
+Ctrl + J: Justify the current paragraph.
+Ctrl + T: Invoke the spell checker, if available.
+
+Navigation:
+Use the arrow keys to move the cursor.
+Use the Page Up and Page Down keys to scroll up and down.
+Use the Home key to move to the beginning of a line.
+Use the End key to move to the end of a line.
+
+
+
+Code 20: Less
+
+# $less myfile.txt
+
+Navigate Through the File:
+After running less myfile.txt, you can use the Spacebar to move forward one page, B to move backward one page, G to go to the end of the file, 1G or g to go to the beginning of the file, and / to search for a string.
+
+Additional Options:
+
+-N: Display line numbers.
+-i: Ignore case when searching.
+-F: Exit if the entire file fits on one screen.
+-R: Display raw control characters.
+-S: Wrap lines at the edge of the screen.
+
+
+
+Code 21: vi 
+# $vi filename	
+
+Editor Modes:
+
+vi has two main modes:
+
+Command Mode: This is the default mode when you start vi. In this mode, you can navigate through the file, delete text, copy, paste, and perform other editing tasks.
+Insert Mode: In this mode, you can insert and edit text. To enter Insert Mode, press i. To exit Insert Mode and return to Command Mode, press Esc.
+
+Editor Controls:
+
+Command Mode:
+i: Enter Insert Mode (insert before the cursor).
+a: Enter Insert Mode (insert after the cursor).
+x: Delete the character under the cursor.
+dd: Delete the current line.
+yy: Copy (yank) the current line.
+p: Paste the copied or deleted text after the cursor.
+: Save changes (write).
+: Quit the editor.
+!: Quit without saving changes (force quit).
+or
+: Save changes and quit.
+Insert Mode:
+Esc: Return to Command Mode.
+Arrow keys: Navigate through the text.
+
+
+
+
+
+
+
+
+
+
+Code 22: compress
+# $ gzip filename
+
+It convets file into filename.gz.
+
+# $ gzip filename1 filename2 filename3
+
+It compresses multiple files.
+
+# $ gzip *.txt
+Compressed all files with .txt.
+
+# $  gzip -c filename > filename.gz
+
+Write the output to standard output and keep the original file.
+
+# $  gzip -r directory_name
+
+Recursively compress files in directories.
+
+# $   gzip -9 filename
+
+-1 to -9: Set the compression level, with -1 being the fastest (less compression) and -9 being the slowest (most compression)
+
+
+# $ gzip -N filename
+
+
+# $ gzip -k filename
+The -k (or --keep) option keeps the original file after compressing.
+
+
+# $ gzip -l filename.gz
+The -l (or --list) option lists information about the compressed file, including the original size, compressed size, ratio, and uncompressed name.
+
+# $  gzip -v example.txt
+
+Compress a file and show the compression ratio:
+
+# $ zcat filename.gz
+To view the contents of a compressed file without decompressing it, you can use zcat, zgrep, or zmore.
+
+# $ zgrep "pattern" filename.gz
+# $ zmore filename.gz
+
+
+
+Code 23: Decompress
+# $ gzip -d filename.gz
+
+Normal command to decompress.
+
+# $  gzip -dv example.txt.gz
+Decompress a file and show the decompression ratio:
+
+# $ gunzip -c filename.gz > newfilename
+
+By default, gunzip deletes the compressed .gz file after decompression. If you want to keep the .gz file, you can use the -c option to output the decompressed content to stdout, and then redirect it to a file.
+
+# $ gunzip -f filename.gz
+force decompress.
+
+# $ gunzip filename.gz
+
+# $ gunzip file1 file2 file3
+
+# $ gunzip /path/to/directory/*.gz
+
+# $ bunzip2 filename.bz2
+bunzip2 is the command used to decompress files that were compressed using bzip2. It restores the original file from its compressed .bz2 version. Here’s a brief guide on using bunzip2 on Linux:
+
+# $ bunzip2 file1.bz2 file2.bz2 file3.bz2
+
+
+Checking File Type
+To determine if a file is compressed, you can use the file command
+# $  file filename.gz
+
+
+
+
+Code 24: tar
+
+Suppose we are in current directory and it has following files directory in it
+Dir1, file1, file2, file3
+We want to create a new tar file which has dir1 and file1,
+
+# $tar -c file1 dir1 -f filename.tar
+
+If I want to see the file,
+
+# $ tar -t -f filename.tar	
+
+# $ tar -tjvf archive_name.tar.bz2
+
+Create a tar.gz (gzip compressed) archive:
+
+# $ tar -czvf archive_name.tar.gz file1 file2 file3
+
+Create a tar.bz2 (bzip2 compressed) archive:
+
+# $  tar -cjvf archive_name.tar.bz2 file1 file2 file3
+
+
+Suppose we have a directory and inside it has files we have to compress. But, it does not accept directory. Use tar for this.
+
+# $tar -cvf name.tar filepath
+
+•  -c : Create a new archive.
+•  -v : Verbosely list files processed.
+•  -f : Specify the archive file name.
+
+# $tar -czvf archive.tar.gz directory
+
+Create a tar.gz (gzip compressed) archive:
+
+# $tar -xvf name.tar filepath
+
+# $tar -cvf archive.tar file1 file2 directory
+
+# $tar -czvf archive.tar.gz directory
+
+# $tar -xzvf archive.tar.gz
+
+# $ tar -tvf archive.tar
+
+Common Options:
+
+-c: Create a new archive.
+-x: Extract files from an archive.
+-v: Verbose mode (display progress).
+-f: Specify the archive file name.
+-z: Use gzip compression.
+-j: Use bzip2 compression.
+-t: List the contents of an archive.
+
+
+
+Extract a tar archive:
+
+# $  tar -xvf archive_name.tar
+
+Extract a tar.gz archive:
+
+# $   tar -xzvf archive_name.tar.gz
+
+Extract a tar.bz2 archive:
+
+# $   tar -xjvf archive_name.tar.bz2
+
+
+# $    tar -cvf archive_name.tar --exclude='*.log' /path/to/directory
+
+# $    tar -rvf archive_name.tar newfile
+
+# $     tar -Avf archive_name1.tar archive_name2.tar
+
+# $      tar -uvf archive_name.tar file1
+
+
+Code 24: grep
+
+# $grep ‘>’ Emboss_2.fasta 
+
+It will show the title of the fasta file. If there are more than one sequences. It will show all the header of all sequences.
+
+#$ grep -v ‘>’ Emboss_2.fasta
+
+The command grep -v '>' Emboss_2.fasta is used to filter out lines from the Emboss_2.fasta file that contain the character >. Means it will show all lines of the fasta file except the line having header. 
+-v invert the match.
+
+#$grep -c '^>' Emboss_.fasta.
+
+It will count all lines starting with > . Means it will show how many headers are there. It counts.
+
+#$grep -v '>' Emboss_1.fasta | grep -E -o 'G' | wc -l 
+
+It is used to count the number of occurrences of the nucleotide 'G' (guanine) in the sequence data of a FASTA file, excluding header lines.
+
+#$grep -v '>' Emboss_1.fasta | grep -E -o '[AG]' | wc -l
+
+Search total A and G combined.
+
+#$grep -v '>' Emboss_1.fasta | grep -E -o 'AT' | wc -l
+
+searches pattern matching the AT in each line and count it.
+
+#$cat -n example.fasta | grep --color=always 'AT’  
+
+shows all AT patterns.
+
+#$grep --color=always 'AT\|CG' filename.fasta
+
+#$grep --color=always 'AT' filename.fasta | GREP_COLORS='ms=01;31' grep --color=always 'CG' | GREP_COLORS='ms=01;32' grep --color=always -E 'AT|CG'
+
+#$ grep -B1 ‘AT’ Emboss_1.fasta
+
+searches for the pattern "AT" in a file and displays the matching line along with the line before it. The -B1 option tells grep to include one line of context before each match.
+
+#$ grep 'A' sujata.txt 
+
+search capital A only.
+
+#$ grep ‘a’ Sujata.txt
+
+Search small only.
+
+#$grep -i ‘A’ Sujata.txt
+
+search case insensitive.
+
+#$grep -v ‘A’ Sujata.txt
+
+shows lines not matching the pattern.
+
+#$grep -v -i ‘a’ Sujata.txt
+
+# $grep -o ‘A’  grep.txt | wc -l
+
+The command grep -o 'A' grep.txt | wc -l is used to count the occurrences of the letter 'A' in the file grep.txt. Let's break down the command:
+
+#$grep -n ‘a’ Sujata.txt 
+
+shows line number having the pattern.
+
+#$ grep -B1 ‘a’ Sujata.txt
+
+shows matching line and one line above it. 
+
+#$ grep -B2 ‘a’ Sujata.txt
+
+shows matching line and two lines above it.
+
+#$grep -C1 ‘a’ Sujata.txt
+
+shows matching line and one line above it and one below it.
+
+#$ grep -C2 ‘a’ Sujata.txt
+
+shows matching line and two lines above it and two below it.
+
+#$grep -w ‘RAM’ Sujata.txt 
+
+search word ram
+
+#$grep -w ‘RAM’ file1 file2 file3 file4
+
+#$grep -w ‘hello’ *.txt
+
+Will search the hello pattern to files all having .txt format.
+
+
+
+Code 27: history
+
+#$history 
+u can grep the history you want to search.
+
+
+
+Code 28: ln command
+
+
+The ln command in Unix-like operating systems is used to create links between files. It can create two types of links:
+
+Hard Links: These links point directly to the inode of a file, meaning they reference the same physical data on the disk. Changes to one file are reflected in all hard links to that file. Hard links cannot be created for directories or across different file systems.
+
+Symbolic Links (Soft Links): These links are simply pointers to the filename of another file. They can point to directories and can span different file systems. Symbolic links are more flexible than hard links but may become invalid if the target file is deleted or moved.
+
+
+
+
+Soft Link
+
+#$ln -s original_file symbolic_link
+
+Suppose we have file inside a directory and many subdirectories inside it to search, so we can just give a link and can find it easily.
+
+Suppose,
+
+#$Documents$chiru$dirt12$$dirt1
+
+So dirt1 has Sujata.txt file and we want to make the soft link for easy access.
+
+So, type $cd and go home directory and make their soft link.
+
+#$ ln -s  Documents/chiru/dirt12/dirt11/Sujata.txt  Sujata_softlink
+
+It will create soft link in the home directory. Do $ls in home directory and u will find the file here.
+
+Hardlink
+
+#$ ln    original_file    hard_link
+
+Common Options:
+-s, --symbolic: Create symbolic links instead of hard links.
+-f, --force: Remove existing destination files before creating the link.
+-v, --verbose: Display verbose output.
+-i, --interactive: Prompt before overwriting existing destination files.
+-n, --no-dereference: Treat the destination as a normal file if it is a symbolic link to a directory.
+
+#$ln -sf target_file link_name
+#$ln -sv target_file link_name
+
+
+
+
+Code 29: Head
+
+# $ head   fasta_file 
+shows first 10 sequence lines.
+
+# $ head   fastafile1    fastafile2 
+can show both files simultaneously.
+
+# $ head -n 20 filename.txt
+
+# $ head -c 100 filename.txt
+
+# $head -q file1.txt   file2.txt file3.txt
+
+-q Option: Suppresses the header lines that typically indicate the file name.
+
+# $head -n 2 fastafile1 && -n 5 fastafile2
+
+# $ ls -ltrh | head -n 4
+
+
+Code 30: Tail 
+
+
+#$ tail Emboss.fasta 
+
+It shows last 10 lines.
+
+#$tail -n 1/2/3/5/ Emboss.fasta
+
+#$tail -c Emboss.fasta
+
+#$tail -f  Emboss.fasta
+
+#$tail -F Emboss.fasta
+
+#$tail -q Emboss.fasta
+
+#$tail -v Emboss.fasta
+
+#$tail -v Emboss.fasta
+
+#$ tail   file1.txt.  file2.txt   file3.txt
+
+#$ tail -q file1.txt file2.txt file3.txt
+
+#$ ls | tail
+Code 31: who am I
+
+#$ whoami
+
+this will give Akhilesh in my terminal. The $ symbol at the beginning of the command prompt usually indicates the start of a shell command. In this case, $whoami is an attempt to execute the whoami command, which typically returns the username of the current user in Unix-like operating systems.
+
+
+Code 31: disk usage
+
+#$ du options [files or directories]
+
+#$ du -h 
+#$ du -hc
+#$ du -ahc 
+
+Common Options:
+
+-h, --human-readable: Print sizes in human-readable format (e.g., 1K, 234M, 2G).
+-s, --summarize: Display only a total for each argument.
+-c, --total: Produce a grand total.
+-k: Display sizes in kilobytes.
+-m: Display sizes in megabytes.
+-g: Display sizes in gigabytes.
+-B, --block-size=SIZE: Use SIZE-byte blocks for sizes.
+-h, --human-readable: Print sizes in human-readable format.
+
+
+
+
+Code 32: disk use and available
+
+#$ df -h filepath/directory
+#$ df -ah 
+
+#$ df -h -BG (shows in gigabyte)
+
+#$ df -h -BM (shows in megabyte)
+
+#$ df -h -BK (shows in kilobyte)
+
+
+Common Options:
+
+-h, --human-readable: Print sizes in human-readable format (e.g., 1K, 234M, 2G).
+-T, --print-type: Print the file system type.
+-t <type>, --type=<type>: Limit the listing to file systems of type <type>.
+-x <type>, --exclude-type=<type>: Exclude file systems of type <type>.
+-a, --all: Include all file systems, including those with 0 blocks.
+-i, --inodes: Display inode usage information.
+-h, --help: Display a help message and exit.
+--version: Display version information and exit.
+
+#$df -Th
+#$ df -hT /dev/sda1
+#$ df -i
+#$ df -ah
+
+
+#$ free -h
+#$ free -m
+#$ free -g
+#$ free -s 5
+#$ free -t 
+#$ free -c N
+
+
+
+Code 32: uname
+#$ uname options
+
+It gives out Linux in the terminal.
+
+Common Options:
+
+-a, --all: Print all information.
+-s, --kernel-name: Print the kernel name.
+-n, --nodename: Print the network node hostname.
+-r, --kernel-release: Print the kernel release.
+-v, --kernel-version: Print the kernel version.
+-m, --machine: Print the machine hardware name.
+-p, --processor: Print the processor type.
+-i, --hardware-platform: Print the hardware platform.
+-o, --operating-system: Print the operating system.
+
+
+Code 33: sudo
+
+#$ sudo  install  package_name
+
+#$ sudo  apt  install  package_name
+
+#$ sudo apt remove package_name
+
+#$ apt show package_name
+
+#$  which sudo
+
+means path of location of sudo. In my terminal the output was /usr/bin/sudo.
+
+#$ which ls
+
+the output is /usr/bin/ls.
+
+#$ apt search package_name(emboss)
+
+#$ sudo -u username command
+#$ sudo -s
+#$ sudo -i
+#$ sudo -k
+#$ sudo -l
+#$ sudo -v
+#$ sudo ls /root
+#$ sudo nano /etc/hosts
+
+
+
+
+
+
+Code 34: ps
+
+#$ ps
+
+The ps command in Linux is used to list currently running processes. It provides information about processes running on the system, such as their process ID (PID), terminal associated with the process, CPU and memory usage, and more.
+
+Common Options:
+
+-e: Display information about all processes.
+-f: Display a full listing.
+-u <user>: Display information about processes owned by a specific user.
+-aux: Display all processes in a user-oriented format.
+-ax: Display information about all processes without controlling terminal.
+-eF: Display the full format listing.
+-ejH: Display information about processes in a BSD format.
+-L: Display information about threads.
+
+#$  ps -e | more
+
+#$ ps -ef | grep httpd
+
+#$ systemctl status httpd
+
+#$  ps -eH
+
+#$  ps -u username
+
+#$  ps -p PID
+
+#$  ps -o pid,cmd
+
+#$  ps -g <PGID>
+
+#$  ps -u root | more
+
+The command ps -u root | more is used to display information about processes owned by the user root, and then the output is piped through the more command for pagination.
+
+#$ ps -u paul | more
+
+
+
+
+Code 37: Top
+
+The top command in Linux is used to monitor system processes and resource usage in real-time. It provides a dynamic, interactive display of system processes, CPU usage, memory usage, and other system-related information.
+When you run the top command, you'll see a continuously updating display that shows various metrics, such as:
+•	Overall system load averages
+•	CPU usage breakdown by process and thread
+•	Memory (RAM) usage
+•	Swap space usage
+•	Process information including PID, user, CPU%, memory%, command, and more
+
+#$ top
+
+Interactive Commands:
+
+While running top, you can use various interactive commands to sort, filter, and manipulate the displayed information. Some common interactive commands include:
+
+k: Kill a process. You'll be prompted to enter the PID of the process you want to kill.
+r: Change the priority of a process. You'll be prompted to enter the PID and new priority.
+Spacebar: Refresh the display.
+1: Toggle between showing total CPU usage and per-core CPU usage.
+f: Select which fields to display.
+o: Change the sort order of processes.
+u: Filter processes by user.
+? or h: Display a help screen with a list of interactive commands.
+
+
+
+
+
+
+
+
+Code 38: chmod
+
+The chmod command in Linux is used to change the permissions of files and directories. It stands for "change mode". It allows you to modify the read, write, and execute permissions for the owner, group, and others on a file or directory.
+#$ chmod     options   mode file/directory
+
+Permissions
+
+•	Read (r)
+•	Write (w)
+•	Execute (x)
+
+Permission Levels
+
+•	u- yourself
+•	g-group
+•	o-other
+•	a-all
+
+#$ id username(akhilesh)
+
+Output is like,
+
+uid=1000(akhilesh)  gid=1000(akhilesh) groups=1000(akhilesh),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),118(lpadmin)
+
+The output of the id akhilesh command provides information about the user "akhilesh". Here's what each part of the output means: 
+
+uid=1000: This indicates the User ID (UID) of the user "akhilesh". The UID is a numerical value assigned to each user on the system. In this case, it is 1000. 
+
+gid=1000: This indicates the primary Group ID (GID) of the user "akhilesh". The GID is a numerical value assigned to the primary group of the user. In this case, it is also 1000. 
+
+groups=1000(akhilesh),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),118(lpadmin): This lists the supplementary group IDs (GIDs) of the user "akhilesh". These are additional groups that the user is a member of, in addition to their primary group. Each group is represented by its GID and group name in parentheses. In this case, "akhilesh" is a member of several groups including adm, cdrom, sudo, dip, plugdev, users, and lpadmin. 
+
+
+
+
+#$ ls -ltrh
+
+Total 471M 
+-rw-rw-r-- 1 akhilesh akhilesh 823K Dec 16 2020 Linux-Tutorial.pdf.3 
+-rw-rw-r-- 1 akhilesh akhilesh 823K Dec 16 2020 Linux-Tutorial.pdf.2 
+drwxr-xr-x 4 akhilesh akhilesh 4.0K Oct 19 2023 ncbi-blast-2.15.0+ 
+-rw-rw-r-- 1 akhilesh akhilesh 225M Oct 20 2023 ncbi-blast-2.15.0+-aarch64-linux.tar.gz 
+-rw-rw-r-- 1 akhilesh akhilesh 0 May 1 20:20 sample.fastq 
+-rw-rw-r-- 1 akhilesh akhilesh 14 May 1 20:29 rama.fa 
+-rw-rw-r-- 1 akhilesh akhilesh 316 May 1 20:55 Chiru.csv 
+-rw-rw-r-- 1 akhilesh akhilesh 69 May 1 21:06 suju.txt 
+-rw-rw-r-- 1 akhilesh akhilesh 276 May 2 09:34 out.txt.gz 
+-rw-rw-r-- 1 akhilesh akhilesh 1 May 2 10:17 see.txt 
+-rw-rw-r-- 1 akhilesh akhilesh 8 May 2 10:18 sh.txt 
+drwxrwxr-x 3 akhilesh akhilesh 4.0K May 2 11:41 protein
+
+The first character (- in this case) indicates the type of the file or directory. 
+- indicates it's a regular file. Other common types include d for directory, l for symbolic link, etc.
+-rw-rw-r--: This sequence represents the permissions of the file or directory. Let's break it down:
+
+The next nine characters (rw-rw-r--) represent the actual permissions:
+
+The first set of three characters (rw-) specifies the permissions for the owner of the file.
+
+r means the owner has read permission.
+w means the owner has write permission.
+- means no execute permission for the owner.
+
+The second set of three characters (rw-) specifies the permissions for the group that owns the file.
+
+r means the group has read permission.
+w means the group has write permission.
+- means no execute permission for the group.
+
+The third set of three characters (r--) specifies the permissions for others (everyone else).
+r means others have read permission.
+- means others have no write or execute permission.
+
+In summary, -rw-rw-r-- means the file is readable and writable by the owner (akhilesh) and the group (akhilesh), and readable by others.
+
+
+
+#$ chmod  [options]   mode file/directory
+
+Options: 
+
+Optional flags that modify the behavior of the chmod command.
+mode: The new permissions to set, specified using either symbolic notation (e.g., u+rwx) or octal notation (e.g., 755).
+file/directory: The file or directory whose permissions are to be changed.
+
+Common Options:
+
+-v: Verbose mode. Displays a message for each file processed.
+-c: Verbose mode with changes only. Displays a message only if a change is made.
+-R: Recursive mode. Changes the permissions of the specified directory and all its subdirectories and files.
+--reference=<file>: Sets the permissions of the specified file to match those of <file>.
+--help: Displays a help message and exits.
+--version: Displays version information and exits.
+
+Symbolic Notation:
+
+u: User/Owner.
+g: Group.
+o: Others.
+a: All (equivalent to ugo).
++: Adds permissions.
+-: Removes permissions.
+=: Sets permissions explicitly.
+
+
+Change the permission:
+
+Suppose we have file like this,
+
+-rw-rw-r-- 1 akhilesh akhilesh 225M Oct 20 2023 ncbi-blast-2.15.0+-aarch64-linux.tar.gz 
+
+Here we can see that,
+
+First three line rw- means no execute permission for owner.
+Middle three line rw- no executable for group.
+Last three r - - no write and executable for the other.
+
+To add the permission for owner:
+
+#$ chmod u + x filename
+
+it will add permission to owner of execute.
+Now the output is like,
+-rwxrw-r-- 1 akhilesh akhilesh 225M Oct 20 2023 ncbi-blast-2.15.0+-aarch64-linux.tar.gz 
+
+#$chmod g +x filename 
+
+-rwxrwxr-- 1 akhilesh akhilesh 225M Oct 20 2023 ncbi-blast-2.15.0+-aarch64-linux.tar.gz 
+$chmode -rw-rwxr-- 1 akhilesh akhilesh 225M Oct 20 2023 ncbi-blast-2.15.0+-aarch64-linux.tar.gz 
+
+#$ chmod o+x filename
+
+Similarly, we can manipulate like,
+
+#$chmod ugo +r 
+
+– gives read permission to user,group and other at one go.
+
+#$chmod ug+r or uo +r or ug +rwx
+
+#$chmod a+x means all executable permission given.
+
+For removing permission
+
+#$chmod a -x, 
+
+All same but negative sign.
+
+In octal notation, the permissions -rw-rw-r-- translate to the numeric value 664. Here's how the conversion works:
+
+r (read) is represented by the number 4.
+w (write) is represented by the number 2.
+x (execute) is represented by the number 1.
+- (no permission) is represented by 0.
+
+Let's break down the permissions:
+
+Owner: rw- translates to 4 (read) + 2 (write) = 6.
+Group: rw- translates to 4 (read) + 2 (write) = 6.
+Others: r-- translates to 4 (read) + 0 (no write, no execute) = 4.
+So, the octal representation for -rw-rw-r-- is 664.
+Explanation:
+
+The leftmost digit (6) represents the permissions for the owner (rw-).
+The middle digit (6) represents the permissions for the group (rw-).
+The rightmost digit (4) represents the permissions for others (r--).
+In octal notation, each digit corresponds to the sum of the permissions:
+
+4 for read (r)
+2 for write (w)
+1 for execute (x)
+0 for no permission (-)
+Therefore, 664 represents -rw-rw-r-- in octal notation.
+
+The command chmod 755 is used to change the permissions of a file or directory in Linux. Here’s what each part of chmod 755 signifies:
+
+Chmod Command:
+
+chmod: Stands for "change mode", used to change file or directory permissions.
+Numeric Representation (Octal Notation):
+
+755: This is the octal representation that specifies the permissions for the file or directory.
+Breakdown of 755:
+
+The first digit (7): Specifies permissions for the owner (user).
+7 in octal corresponds to rwx (read, write, execute). (4+2+1)
+The second digit (5): Specifies permissions for the group.
+5 in octal corresponds to r-x (read, execute). (4+0+1)
+The third digit (5): Specifies permissions for others (everyone else).
+5 in octal corresponds to r-x (read, execute).(4+0+1)
+
+Interpretation:
+The owner (user) of the file or directory (7): Has read (r), write (w), and execute (x) permissions.
+The group (5): Has read (r) and execute (x) permissions.
+Others (5): Have read (r) and execute (x) permissions.
+
+#$chmod a=rw filename
+#$chmod a=rw directory
+
+
+
+
+
+Code 39: Update
+#$ sudo apt-get update
+#$ sudo apt-get upgrade
+
+
+
+
+Code 40: switching to root user.
+#$ su –
+
+
+
+Code 41: kill
+
+
+The kill command in Linux is used to terminate (kill) processes by their process ID (PID) or by their job ID. It sends a signal to the specified process, which instructs the process to terminate. Here’s how you can use the kill command effectively:
+
+#$ kill [options] PID
+
+Common Options:
+
+-<signal>: Specifies the signal to send. If no signal is specified, SIGTERM (15) is sent by default, which typically asks the process to terminate gracefully.
+-l: Lists all available signals.
+-s <signal>: Specifies a signal by name or number (e.g., -s SIGKILL or -s 9 for SIGKILL).
+-<signal> can also be specified without the leading dash (e.g., SIGKILL instead of -9).
+
+#$ kill 1234 (PID)
+
+#$ kill -9 1234
+To send a different signal (e.g., SIGKILL, which forcefully terminates the process):
+
+#$ kill 1234 5678 9101
+You can specify multiple PIDs separated by spaces:
+
+
+#$ kill -l 
+To list all available signals and their corresponding numbers:
+
+Important Signals:
+
+SIGTERM (15): Default signal sent by kill. Asks the process to terminate gracefully.
+SIGKILL (9): Forcefully terminates the process. Cannot be caught or ignored by the process.
+
+#$ killall firefox
+
+killall is another command that terminates processes by name rather than by PID. It's useful when you want to terminate all processes with a specific name.
+
+Common Options:
+
+Signal Options:
+
+-<signal> or -s <signal>: Specifies the signal to send. If no signal is specified, SIGTERM (15) is sent by default, which asks the process to terminate gracefully.
+Example: kill -9 PID or kill -s SIGKILL PID to send SIGKILL, which forcefully terminates the process.
+
+-l: Lists all available signals. This option is used to list all signal names and numbers that can be used with the -<signal> option.
+Example: kill -l
+-<signal> can also be specified without the dash. For example, SIGKILL can be used as kill -9 PID.
+
+Control Options:
+
+-q: Quiet mode. Suppresses error messages.
+Example: kill -q PID
+-w: Wait for the process to terminate. The kill command will wait until the process has terminated before returning.
+Example: kill -w PID
+Interactive Options:
+-i: Interactive mode. Before sending each signal, kill prompts for confirmation from the user.
+Example: kill -i PID
+-I: Prompt once for each process to confirm termination. Useful when killing multiple processes.
+Example: kill -I PID1 PID2
+Additional Options:
+-a: All mode. Sends the signal to all processes except for init (PID 1).
+Example: kill -a
+-e: Exact match mode. Requires an exact match of the process name when used with killall.
+
+Example: killall -e process_name
+
+#$ kill -9 1234
+
+#$ kill -TERM -w PID
+
+#$ kill -TERM -w PID
+
+#$ kill -9 -i PID 
+
+Use interactive mode to confirm sending SIGKILL to a process:
+
+
+
+
+
+
+Code 42: wget
+
+#$ wget option URL
+
+#$ wget -O filename.extension URL
+
+#$ wget -P /path/to/directory URL
+
+#$ wget --no-check-certificate URL
+
+-no-check-certificate: Disable SSL certificate validation when downloading HTTPS files.
+
+#$ wget -c URL
+Resume a partially downloaded file.
+
+#$ wget -b URL
+
+Download files in the background. Useful for long downloads.
+
+#$ wget -q URL
+
+
+
+Code 43: CURL
+
+#$ curl URL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Code 44: adding user
+
+#$ sudo useradd Chiranjeevi
+
+#$ sudo passwd Chiranjeevi
+
+#$ id Chiranjeevi
+
+#$ sudo useradd -m -d /home/john john
+
+-m: Creates the user's home directory (/home/john in this example).
+ -d /home/john: Specifies the home directory path for the new user.
+
+#$ sudo useradd -s /bin/bash john
+
+-s /bin/bash: Sets the default shell for the new user (bash in this example).
+
+#$ sudo useradd -u 1001 -g users john
+
+-u 1001: Specifies the UID (User ID) for the new user (1001 in this example).
+-g users: Specifies the primary group (users in this example) for the new user.
+
+#$ sudo useradd -m -s /bin/bash -c "John Doe" john
+
+-c "John Doe": Adds a comment for the user (often used to specify the user's full name or description).
+
+Options:
+
+-m: Creates the user's home directory if it doesn't exist.
+-d <directory>: Specifies the path to the user's home directory.
+-s <shell>: Specifies the user's default shell.
+-u <UID>: Specifies the numeric user ID for the new user.
+-g <group>: Specifies the initial login group for the new user.
+-c <comment>: Adds a comment for the user (usually the user's full name or description).
+-G <group1,group2,...>: Specifies additional groups to which the user belongs.
+
+#$ sudo useradd -m -s /bin/bash -c "John Doe" john
+
+#$ sudo passwd john
+
+
+
+
+
+
+Code 45: User Delete
+
+
+#$  sudo  userdel  [options]  username
+
+To delete the user account chiranjeevi and remove their home directory and mail spool (if any), run the following command.
+
+#$ userdel -r Chiranjeevi
+
+delete home directory also.
+
+#$ userdel   -f  Chiranjeevi
+
+forcefully delete.
+
+#$ userdel -Z chirsnjeevi
+
+#$ less /etc/group
+
+You will see something like
+Ravi:x:1005: luru, shaann
+Means ravi is group name, 1004 is group is.
+
+
+
+
+
+
+
+
+Code 46: usermod
+
+
+So, 
+you make the user Chiranjeevi and u want to change different modes. While you are making home directory u made home directory and different things for user and now u want to change that.
+
+#$ sudo usermod [options] username
+
+#$ sudo usermod -l new_username old_username
+
+#$ sudo usermod -d /new/home/directory username
+
+-d /new/home/directory: Specifies a new home directory for the user.
+
+#$ sudo usermod -s /bin/bash username
+s /bin/bash: Sets /bin/bash as the default shell for the user
+
+#$ sudo usermod -aG additional_group username
+-aG additional_group: Adds additional_group to the user's supplementary groups.
+
+#$ sudo usermod -G primary_group username
+-G primary_group: Sets primary_group as the user's primary group, removing all other groups.
+
+#$ sudo usermod -L username
+
+-L: Locks the user account by placing a ! at the beginning of the password field in /etc/shadow, effectively preventing login.
+
+#$ sudo usermod -U username
+-U: Unlocks a previously locked user account, removing the ! from the password field.
+
+#$ sudo usermod -e YYYY-MM-DD username
+-e YYYY-MM-DD: Sets an expiration date (YYYY-MM-DD) for the user account.
+
+#$ sudo usermod -l new_username -d /new/home/directory old_username
+
+
+#$ groups 
+Output will show the groups there.
+
+
+
+Code 47: Add group
+
+
+#$ sudo    groupadd   [options]    groupname
+a new group test is created and how can u see the group.
+
+#$ sudo groupadd -g 1001 newgroup 
+o create a group newgroup with a specific GID (e.g., 1001), you would run:
+
+
+#$ less etc/group
+there u will see group with test:x:1006.
+
+Notes:
+Group names and GIDs are managed centrally in the /etc/group file.
+Always ensure that group names are unique to avoid conflicts with existing groups.
+Use sudo or be logged in as root to create groups, as only privileged users can modify group settings.
+
+
+
+
+
+
+
+
+
+
+
+
+Code 48: groupdel test
+
+#$ sudo groupdel groupname
+
+
+
+
+
+
+Code 49: log in to new user
+
+#$  su -ravi
+
+Then password. You will be logged there.
+
+
+
+Code 50:  etc/passwd
+
+The /etc/passwd file is a crucial system file in Unix-like operating systems, including Linux. It contains essential information about user accounts on the system. Each line in /etc/passwd represents a user account and is formatted with several fields separated by colons (:). Here’s a breakdown of what each field typically represents:
+
+Fields in /etc/passwd:
+
+Username: The login name of the user.
+Password: Historically, the hashed password (now typically stored in /etc/shadow for security reasons, with x or * indicating the password is stored in /etc/shadow).
+
+UID (User ID): Numeric identifier for the user.
+GID (Group ID): Primary group identifier for the user.
+User Info: Additional information about the user (often includes the user's full name).
+
+Home Directory: The path to the user's home directory.
+Login Shell: The default shell for the user when they log in.
+
+
+
+john:x:1001:1001:John Doe:/home/john:/bin/bash
+Username: john
+Password: x (indicating the password is stored in /etc/shadow)
+UID: 1001
+GID: 1001 (same as the primary group ID)
+User Info: John Doe
+Home Directory: /home/john
+Login Shell: /bin/bash
+
+
+Code 51:  /etc/shadow
+
+Purpose of /etc/shadow:
+
+The primary purpose of /etc/shadow is to enhance security by storing password hashes and related account information with restricted access. This file is typically readable only by the root user (sudo), ensuring that regular users cannot access sensitive authentication details.
+
+Fields in /etc/shadow:
+
+The /etc/shadow file consists of several fields separated by colons (:), each representing different aspects of a user account's authentication information. Here's a typical breakdown of the fields:
+
+Username: The login name of the user.
+Password Hash: The hashed password, often preceded by an algorithm identifier (e.g., $6$ for SHA-512).
+Last Password Change: The date of the last password change, represented in days since January 1, 1970 (Unix epoch).
+Minimum Password Age: The minimum number of days required before the password can be changed.
+Maximum Password Age: The maximum number of days the password is valid before it must be changed.
+Password Warning Period: The number of days before password expiration when the user is warned.
+Password Inactivity Period: The number of days after password expiration before the account is disabled.
+Account Expiry Date: The date when the account expires, represented in days since January 1, 1970 (Unix epoch).
+Reserved Field: Reserved for future use.
+
+john:$6$7MnYd0qW$11mDkGQ5qYc6ZLzP3BZD9Di1zO/8JenJg7P8BkC.N0vCfsIasf5e9WzvH9BzQumBfGHUyPum3doOfeZZ/U3Vp.:18730:0:99999:7:::
+Username: john
+Password Hash: $6$7MnYd0qW$11mDkGQ5qYc6ZLzP3BZD9Di1zO/8JenJg7P8BkC.N0vCfsIasf5e9WzvH9BzQumBfGHUyPum3doOfeZZ/U3Vp. (SHA-512 hashed password)
+Last Password Change: 18730 (days since Unix epoch)
+Minimum Password Age: 0 (days)
+Maximum Password Age: 99999 (days)
+Password Warning Period: 7 (days)
+Password Inactivity Period: -1 (account is not disabled after password expiration)
+Account Expiry Date: : (no expiration date set)
+Reserved Field: ::
+
+
+
+
+
+
+
+Code 53: lshw
+
+
+The lshw command in Linux is a powerful tool for listing hardware details and configuration information about your system. It stands for "list hardware" and provides comprehensive insights into various hardware components such as CPU, memory, storage devices, network interfaces, and more.
+
+#$ sudo lshw 
+
+#$ sudo lshw -short
+
+#$ sudo lshw -class network….cpu, memory, network, storage,
+
+#$ sudo lshw -sanitize
+
+#$ sudo lshw -json
+
+#$ sudo lshw -xml, -class disk, -class network, -class storage, -class processor, 
+
+#$ sudo lshw – businfo
+
+#$ sudo dmidecode -t memory
+
+#$ sudo dmidecode -s bios-vendor
+
+#$ sudo dmidecode -u
+
+#$ sudo dmidecode -q
+
+
+
+
+
+
+
+
+
+
+
+Code 54: lspci
+
+The lspci command in Linux is used to display detailed information about all PCI buses and devices connected to your system. It provides information about devices such as network adapters, graphics cards, sound cards, USB controllers, and other PCI devices.
+
+#$ lspci
+
+#$ lspci -k
+
+#$ lspci -nn
+
+#$ lspci -v
+
+#$ lspci -vv
+
+#$ lsusb
+
+#$ lsblk
+
+#$ lspci -s 
+
+#$ lspci -SLUT
+
+
+
+
+Code 55: lscpi
+
+
+The lscpu command in Linux is used to display detailed information about the CPU architecture and processing units of the system. It provides information such as the number of CPUs, CPU architecture, CPU family, CPU MHz, cache size, and more.
+
+#$ lscpu
+
+#$ lscpu -e
+
+#$ lscpu -p
+
+#$ lscpu -a
+
+#$ lscpu -s
+
+#$ lscpu -x
+
+
+
+
+Code 56: uniq
+
+Suppose we have file with the line,
+Greeting to everyone
+Hello world
+Greeting to everyone
+Linux ubuntu
+Hello world
+Greeting to everyone
+
+The uniq command in Linux is used to report or filter out repeated lines in a file. It is commonly used in conjunction with other commands like sort since uniq only works on adjacent duplicate lines. Here’s how you can use the uniq command effectively:
+Using the sort command in combination with uniq is a common practice in Linux to effectively remove duplicate lines from a file, since uniq only works on adjacent duplicate lines. Here's how to use these commands together:
+
+#$ sort input_file 
+
+Greeting to everyone
+Greeting to everyone
+Greeting to everyone
+Hello world
+Hello world
+Linux ubuntu
+
+#$ uniq [options] [input_file] [output_file]
+
+#$ sort  options   input_file    | uniq     uniq_options
+
+#$ uniq
+
+Greeting to everyone
+Hello world
+Linux ubuntu
+
+
+#$ sort file | uniq | cat
+
+#$ sort file | uniq 
+To sort the lines and then count the number of occurrences of each line: It shows like,
+
+3 Greeting to everyone
+2 Hello World
+1 Linux Ubuntu
+
+There are 3 lines having greeting and two deleted.
+
+#$ sort input_file | uniq -d
+
+To sort the lines and display only those that are duplicated:
+Means it shows only repeated lines.
+
+Greeting to everyone.
+Hello world.
+
+#$ sort input_file | uniq -u 
+To sort the lines and display only unique lines. Shows the line that are unique not duplicated.
+Linux Ubuntu
+
+#$ sort -f input_file | uniq -i
+
+To ignore case differences when sorting and finding unique lines.
+
+#$ sort -n input_file | uniq
+To sort lines numerically before removing duplicates: This is useful when the lines contain numbers, and you want them sorted in numerical order.
+
+#$ sort -t, input_file | uniq
+
+#$ sort file.txt | uniq -c | sort -nr | head -n 1
+
+#$ sort file.txt 
+
+it arranges alphabetically the lines. If there are two A, A in two line there are arranged parallel.
+
+#$ sort -r file.txt
+
+it reverses the order like it starts from x y and then A.
+#$ sort -n file.txt
+
+it sort numerically.
+
+#$ sort -nr file.txt
+reverse the order.
+If your file has multiple columns and you want to sort by a specific column numerically, use -k to specify the column.
+
+apple      10
+banans      2
+cherry       33
+date            25
+elderberry  5
+
+#$ sort -k 2 -n data.txt
+Output
+banana 2
+elderberry 5
+apple 10
+date 25
+cherry 33
+
+
+#$ sort -t, -k 2 -n file.csv
+
+#$ sort -M file.txt
+
+M: Sorts by month name.
+
+#$ sort -u file.txt
+
+remove duplicate 
+
+#$ sort -f file.txt
+
+#$ sort -t ',' -k 2 file.txt
+
+
+
+
+
+
+
+
+
+
+Code 57: env
+
+The env command in Linux is used to display or modify the environment variables. Environment variables are dynamic values that affect the way running processes behave on a computer. They are used to pass configuration information to applications and scripts.
+
+To see what is inside env,
+
+#$ env
+The output will show all the env variables there. If you want to access a particular env variable like HOSTNAME there,
+
+#$ echo $HOSTNAME
+The output will show molserver1, which is what is stored in the environment.
+
+Suppose I want to store information TEST_VAR= 123 in the env.
+#$ export TEST_VAR=123
+#$ env
+#$ echo $TEST_VAR
+
+The output will be 123, what is inside the variable assigned. This all will show only in this terminal. It sets temporarily. If i open new terminal and type the command,
+#$ echo $TEST_VAR
+
+The output 123 will not be shown.
+To unset the variable,
+#$ unset Test_Var
+
+Suppose I am logged as Chiranjeevi User and follow the below command.
+
+#$ vi .bashrc
+A new console will open,
+
+#!/bin/bash
+Export Test_data=abc
+Press esc>press shift+colon>type wq. It will be stored.
+
+
+
+#$ echo $Test_data
+Nothing will open, so first do,
+
+#$ source .bashrc
+#$ echo $Test_data
+Output will be abc there. Done.
+
+Now, open the new terminal and do following.
+#$ source .bashrc
+#$ echo $Test_data
+Output will be there abc.
+
+Means it sets permanently for that user. But, if we log another user like Ravi, this won’t be there. 
+
+So, how to do for all user permanently,
+
+#$ cp /etc/profile /ect/profile /etc/profile_original
+#$ vi /etc/profile
+A new console will open.
+
+export test_var=123
+save that.
+
+#$ source /etc/profile
+#$ echo $test_var
+Output will be 123.
+Log in as another user, the command will work.
+
+
+
+
+
+
+
+
+
+
+Code 58: PATH
+
+#$ echo $PATH
+#$ cd /usr/bin | ls | grep python
+
+#$  which chmod
+It will show the direction of the chmod location.
+The output,
+is /usr/bin/chmod.
+
+Now do,
+
+#$ echo $PATH
+home/akhilesh/miniconda3/bin:/home/akhilesh/miniconda3/condabin:/home/akhilesh/edirect:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/bin/java//bin
+
+
+See where is usr/bin/chmod is here,
+
+home/akhilesh/miniconda3/bin:/home/akhilesh/miniconda3/condabin:/home/akhilesh/edirect:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/bin/java//bin
+
+#$ cd /usr/bin | ls | grep chmod
+It will give output of chmod and we find it here.
+
+export PATH=$PATH:/usr/local/ncbi/blast/bin
+
+export PATH=”/usr/kr/Desktop/demo/tools/bwa:$PATH”
+
+export PATH=$PATH:/usr/local/ncbi/blast/bin
+
+Example- 
+I download igv and want to export the path for permanent change.
+The location is /home/akhilesh/Desktop/data/IGV_LINUX_2.17.4
+
+
+#$ sudo nano ~/.bashrc
+Type,
+export PATH= “/home/akhilesh/Desktop/data/IGV_LINUX_2.17.4:$PATH”
+
+#$ source ~/.bashrc
+#$ echo $PATH
+#$ igv.sh
+
+
+
+
+
+
+
+Code 59: chown
+
+The chown command in Linux is used to change the owner and/or group of files and directories. It stands for "change owner." This command is typically used when you need to assign ownership of files or directories to a specific user or group.
+
+#$  chown [options] <owner>[:<group>] <file(s) or directory(s)>
+
+#$ chown user1 file.txt
+
+This changes the owner of file.txt to user1, leaving the group unchanged. This changes the owner of file.txt to user1, leaving the group unchanged.
+
+#$ chown user1:group1 file.txt
+
+This changes both the owner to user1 and the group to group1
+
+#$ chown :group1 file.txt
+
+This changes only the group of file.txt to group1, leaving the owner unchanged.
+
+#$ chown -R user1:group1 /path/to/directory
+
+This changes the owner and group of /path/to/directory and all files and directories inside it.
+
+#$ chown user1:group1 file1.txt file2.txt
+
+
+
+
+Code 60:  DIff
+
+
+The diff command in Linux is used to compare files line by line and display the differences between them. It is a powerful tool for comparing text files and directories, providing detailed information about how files differ from each other.
+
+#$ diff [options] <file1> <file2>
+
+#$ diff -u file1.txt file2.txt
+
+#$ diff -w file1.txt file2.txt
+
+#$ diff -r directory1 directory2
+
+Options:
+
+-u: Use unified format for output (default).
+-c: Use context format for output, showing more lines of context around each difference.
+-i: Ignore case differences when comparing files.
+-w: Ignore all whitespace differences.
+-r: Recursively compare directories.
+-q: Report only whether files differ, without details.
+-B: Ignore changes that just insert or delete blank lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Code 61: Echo 
+
+The echo command in Linux is used to display a line of text or string on the standard output (typically the terminal). It is a built-in command in most Unix-like operating systems and is commonly used in shell scripts and batch files to output text.
+
+#$ my_variable=”some text”
+#$ echo $my_variable
+
+Output is,
+Some text
+
+#$ echo my name is paul
+
+Output is,
+my name is paul
+
+#$ “echo my name is paul”
+
+Output is,
+my name is paul
+
+#$ echo ‘my name is paul’
+
+Output is,
+my name is paul
+
+
+#$ my_variable= “Imran”
+#$ echo $my_variable
+
+The output is,
+Imran
+In the same things,
+
+#$ echo “My name is $my_variable”
+
+The output is,
+MY name is Imran.
+
+
+#$ echo "Hello, World!"
+The output,
+Hello, World!
+
+
+#$ echo "This is line one." "This is line two."
+
+The output,
+This is line one. This is line two.
+
+#$ echo -e "First Line\nSecond Line"
+
+The output,
+
+First Line
+Second Line
+
+
+#$ echo $HOME
+
+Display environment variable.
+
+
+#$ echo -e “paul\nlikes\necho”
+
+Output is,
+Paul
+Likes
+Echo
+
+#$ echo -e "paul\tlikes\techo"
+
+Output is,
+paul	likes	echo
+
+You can see thee is gap between the output.
+
+
+
+#$ echo -e "paul\n\tlikes\n\techo"
+
+Output is,
+paul
+	likes
+	echo
+
+
+#$ echo -e "paul\\likes\\echo"
+
+Output is,
+paul\likes\echo
+
+
+
+#$ echo -n "Hello, World!"
+
+Hello, World!
+
+Breakdown
+
+echo: The command to display a line of text.
+
+-n: Prevents the output from ending with a newline character.
+"Hello, World!": The string to be printed.
+The difference is that after the output, the cursor will stay on the same line instead of moving to the next line. This is particularly useful in scripts when you want to print multiple outputs on the same line or need precise control over the formatting of your output.
+
+
+
+
+
+
+
+
+#$ echo "Hello, World!" > hello.txt
+
+This command will create a file named hello.txt containing the text "Hello, World!".
+
+
+#$ echo "Another line" >> hello.txt
+
+This command will append "Another line" to the hello.txt file.
+Common Escape Sequences
+When using the -e option, you can use various escape sequences:
+
+\n: Newline
+\t: Horizontal tab
+\b: Backspace
+\\: Backslash
+\a: Alert (bell)
+\v: Vertical tab
+
+#$  echo -e "First Line\n\tIndented Second Line"
+
+Output is,
+
+First Line
+    Indented Second Line
+
+
+#$ echo -e “\aHello World”
+ 
+Output is,
+
+Hello World
+
+
+
+
+
+
+
+
+
+
+
+
+Code 62: find
+
+The find command in Linux is a powerful utility used to search for files and directories within a directory hierarchy. It can search by various criteria such as name, type, size, modification date, and permissions. The find command is extremely versatile and can be combined with other commands using the -exec option.
+
+#$ find [path] [expression]
+
+#$ find   /path/to/search  -name "filename"
+
+find: The command used to search for files and directories.
+
+/path/to/search: The directory path where the search will be performed. Replace this with the actual path you want to search in.
+
+-iname: This option specifies that the search should be case-insensitive when matching the name.
+
+"*.txt": This is the pattern to match file names against. The * wildcard matches any sequence of characters.
+
+
+#$ find /path/to/search -iname "*.txt"
+Case insensitive search.
+
+#$ find /path/to/search -type d -name "dirname"
+This command will search for directories named "dirname" within the specified path.
+
+#$ find /path/to/search -size +100M
+This command will search for files larger than 100 MB within the specified path.
+
+#$find /path/to/search -mtime -7	
+This command will search for files modified within the last 7 days.
+
+#$ find /path/to/search -perm 755	
+
+#$ find /path/to/search -name "*.log" -exec rm -f {} \;
+This command will find all .log files and delete them. The {} is a placeholder for the found file, and \; indicates the end of the command.
+
+#$ find /path/to/search -user username
+This command will search for files owned by the specified user.
+
+
+#$ find /path/to/search -empty
+
+#$ find /path/to/search -name "*.txt" -and -size +1M
+
+#$ find /path/to/search \( -name "*.txt" -or -name "*.log" \) -and -size +1M	
+
+This command will search for .txt and .log files larger than 1 MB.
+
+#$ find .
+Listing all files in the current directory and its subdirectories:
+
+#$ find /path/to/search -name "*.jpg" -mtime -30
+
+#$ find /path/to/search -name "*.tmp" -exec rm -f {} \;
+
+#$ find /path/to/search -mtime -1
+
+
+
+
+Code 52:  cut
+
+#$ cut -c 1 filename
+
+will show first character from each line.
+
+#$ cut -c 1,5 filename
+same as above i.e., first and fifth character from each line.
+
+#$ cut -c 1-5 filename
+same as above i.e. first to fifth character
+
+#$ cut -c 2- filename
+Extracts characters from position 2 to the end.
+#$ cut -c -3 filename
+Same as for cut -b
+To separate field or columns,
+Suppose we have a file called example and has,
+Employee| firstname| lastname|age|gender
+We want first coloumns so can use,
+#$ cut -d “|” -f 1 filename
+#$ cut -d '|' -f 2,4 filename
+
+This command extracts the 2nd and 4th fields from each line of file.csv, where fields are delimited by a comma.
+
+#$ cut -d ' ' -f 1,3 file.txt
+
+This command extracts the 1st and 3rd fields from each line of file.txt, where fields are delimited by a space.
+
+#$ cut -d ',' --complement -f 3 file.csv
+
+This command extracts all fields except the 3rd field from each line of file.csv, where fields are delimited by a comma.
+
+#$ cut -d ',' -f 2,4 --only-delimited file.csv.
+
+This command extracts the 2nd and 4th fields only from lines that contain delimiters (commas) in file.csv.
+
+#$ cut -d, -f 1- --output-delimiter=":" country.txt
+#$ cut -d, -f 1- --output-delimiter="|" country.txt
+#$ cut -d “|” -f 2 filename | cut -c 1-5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
